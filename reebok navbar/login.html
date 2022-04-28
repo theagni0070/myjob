@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+    <form id="form">
+        <h4>Full Name</h4>
+        <input type="email" id="mail" placeholder="Enter E-mail">
+        <h4>Email</h4>
+        <input type="text" id="pass" placeholder="Enter pass">
+        <input type="submit" value="Login"> 
+    </form>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",callback)
+    var credential=JSON.parse(localStorage.getItem("info"))
+    function callback(){
+        event.preventDefault();
+        var obj={
+            Email : form.mail.value,
+            Pas : form.pass.value
+        };
+       if (obj.Email == credential[0].Mail && obj.Pas == credential[0].Pass)
+       {
+        alert ("You are Succesfully Logged in")
+       }
+       else {
+           alert ("Somethimg Went Wrong")
+       }
+    }
+    
+</script>

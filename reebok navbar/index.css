@@ -1,0 +1,14 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto;
+    width: 95%;
+    margin: auto;
+    gap: 20px;
+}
+img {
+    width: 100%;
+}
+#container>div>p:nth-child(4) {
+    text-decoration: line-through;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logindex.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div id="box">
+    <form id="form">
+        <h4>Name</h4>
+        <input id="name" type="text" placeholder="Enter Name">
+        <h4>Email</h4>
+        <input id="email" type="email" placeholder="Enter Email">
+        <h4>Password</h4>
+        <input id="pass" type="text" placeholder="Enter Password">
+        <input type="submit" value="Signup">
+    </form>
+</div>
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit",store)
+    var arr=[];
+    function store(){
+        event.preventDefault()
+        var obj = {
+            Name:form.name.value,
+            Mail:form.email.value,
+            Pass:form.pass.value
+        }
+        arr.push(obj)
+      localStorage.setItem("info",JSON.stringify(arr))
+      window.location.href="login.html"
+    }
+</script>
